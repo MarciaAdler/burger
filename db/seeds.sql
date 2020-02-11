@@ -1,2 +1,2 @@
-INSERT INTO roles (burger_name, devoured)
-VALUES ("Original Burger",false), ("Cowboy Burger", false), ("Southwestern Burger", false)
+INSERT INTO burgers (burger_name)
+VALUES ("Original Burger"), ("Cowboy Burger"), ("Southwestern Burger")
