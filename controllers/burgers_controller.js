@@ -7,7 +7,7 @@ var express = require("express");
 
 var router = express.Router();
 
-var burger = require("../models/burger");
+const burger = require("../models/burger.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
@@ -20,8 +20,10 @@ router.get("/", function(req, res) {
   });
 });
 router.post("/api/burgers", function(req, res) {
-  burger.insertOne(["burger_name"], [req.body.burger_name], function(result) {
+  burger.insertOne(["burger_name"], [req.body.burger], function(result) {
     // Send back the ID of the new burger
+    console.log(req.body.burger);
+    console.log(result);
     res.json({ id: result.insertId });
   });
 });

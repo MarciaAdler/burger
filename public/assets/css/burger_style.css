@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: wheat;
+}
+img {
+  text-align: center;
+  height: 200px;
+  width: auto;
+  border-radius: 2em;
+}
+
+ol {
+}

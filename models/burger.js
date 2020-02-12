@@ -8,8 +8,8 @@ var burger = {
       cb(res);
     });
   },
-  insertOne: function(cols, vals, cb) {
-    orm.insertOne("burgers", cols, vals, function(res) {
+  insertOne: function(col, val, cb) {
+    orm.insertOne("burgers", col, val, function(res) {
       cb(res);
     });
   },
@@ -20,3 +20,4 @@ var burger = {
   }
 };
 // export at the end of the burger.js file
+module.exports = burger;
