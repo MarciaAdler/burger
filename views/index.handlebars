@@ -32,7 +32,7 @@ Create a button in index.handlebars that will submit the user input into the dat
     {{/each}}
 </ol>
 
-<h2>Add a Burger</h2>
+<h2 id="addform">Add a Burger</h2>
 <form id="addBurger" class="button-size">
     <textarea type="text" name="burger"></textarea>
     <button type="submit">Added Burger!</button>
@@ -60,17 +60,21 @@ Create a button in index.handlebars that will submit the user input into the dat
             }
         );
     });
-    $(".devour").on("submit", function (event) {
+    $(".devour").on("click", function (event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
         console.log('click')
         // Get the ID by finding an element with a "name" attribute equal to the string "id"
-        var id = $("[name=burgerid]").val().trim();
-
-
+        var id = $(this).data("burgerid");
+        console.log(id);
+        let newState =
+        {
+            devoured: "true"
+        }
         // Send the PUT request.
-        $.ajax("/api/movies/" + id, {
+        $.ajax("/api/burgers/" + id, {
             type: "PUT",
+            data: newState
         }).then(
             function () {
                 console.log("updated id ", id);

@@ -4,13 +4,21 @@
 
 body {
   background-color: wheat;
+  text-align: center;
 }
 img {
-  text-align: center;
   height: 200px;
   width: auto;
   border-radius: 2em;
+  display: block;
 }
 
 ol {
+  float: left;
+}
+#addform {
+  clear: both;
+}
+form {
+  clear: both;
 }
