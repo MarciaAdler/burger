@@ -2,9 +2,9 @@
 // Export connection
 var mysql = require("mysql");
 
-var connection;
-if (process.env.JAWSDM_URL) {
-  connection = mysql.createConnection(process.env.JAWSBD_URL);
+let connection;
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
   connection = mysql.createConnection({
     host: "localhost",
