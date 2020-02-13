@@ -30,16 +30,30 @@ img {
 #notdevoured {
   margin-right: 50px;
 }
+p {
+  padding-left: 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 li {
   border-style: solid;
   border-color: white;
   border-width: 1px;
   width: 250px;
   background: lightblue;
-}
-#addform {
-  clear: both;
+  list-style: none;
 }
 form {
-  clear: both;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.delete-burger {
+  margin-right: 20px;
+}
+.devour {
+  margin-right: 20px;
 }

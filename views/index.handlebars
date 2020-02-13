@@ -29,6 +29,7 @@ Create a button in index.handlebars that will submit the user input into the dat
             <li>
                 <p>
                     {{this.burger_name}}
+                    <button data-id="{{this.id}}" class="delete-burger">Delete</button>
 
                 </p>
             </li>
@@ -38,7 +39,7 @@ Create a button in index.handlebars that will submit the user input into the dat
     </div>
     <h2 id="addform">Add a Burger</h2>
     <form id="addBurger" class="button-size">
-        <textarea type="text" name="burger"></textarea>
-        <button type="submit">Added Burger!</button>
+        <textarea id="name" type="text" name="burger"></textarea>
+        <button id="submit" type="submit">Add Burger!</button>
     </form>
 </div>
