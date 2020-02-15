@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  justify-content: center;
 }
 .img {
   display: flex;
@@ -33,7 +34,7 @@ img {
 }
 
 p {
-  padding-left: 30px;
+  padding-left: 15px;
   text-align: left;
   display: flex;
   flex-direction: row;
@@ -44,7 +45,7 @@ li {
   border-style: solid;
   border-color: white;
   border-width: 1px;
-  width: 250px;
+  width: 220px;
   background: lightblue;
   list-style: none;
 }
@@ -64,11 +65,15 @@ form {
 #submit {
   background-color: grey;
 }
-@media (max-width: 450px) {
+@media (max-width: 490px) {
   ul {
     width: auto;
   }
   li {
+    width: auto;
+  }
+  img {
+    height: 150px;
     width: auto;
   }
 }
